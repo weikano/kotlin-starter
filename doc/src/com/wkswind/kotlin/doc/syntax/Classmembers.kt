@@ -72,10 +72,12 @@ class Properties {
     var allByDefautl : Int=1 //must have initializer or explicity fill set and get method like stringRespresentation
     var initialized = 1
     val isEmpty : Boolean get() = (allByDefautl === null)
-    var stringRespresentation : String
-        get() =  this.toString()
+    var stringRespresentation : String = ""
         set(value) {
-            stringRespresentation = value
+            if(value.length>0) {
+                field = value
+            }
+//            stringRespresentation = value
         }
     var setterVisibility : String = "abc"
         private set
@@ -88,7 +90,10 @@ fun main(args: Array<String>) {
 //    val derived = Derived(3)
 //    derived.v()
 //    base.v()
-    C(0).f()
-    C(1).f()
+//    C(0).f()
+//    C(1).f()
+//    val p = Properties()
+//    p.stringRespresentation = "hello"
+//    println(p.stringRespresentation)
 }
 
