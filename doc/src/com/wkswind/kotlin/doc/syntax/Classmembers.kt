@@ -85,6 +85,26 @@ class Properties {
 //        set
 }
 
+interface MyInterface {
+    val prop : Int
+    val propertyWithImplementation : String
+        get() = "foo"
+    fun foo() {
+        println(prop)
+    }
+}
+
+class Child : MyInterface {
+    override val prop: Int
+        get() = 4 //To change initializer of created properties use File | Settings | File Templates.
+    override val propertyWithImplementation: String
+        get() = super.propertyWithImplementation.toUpperCase()
+    override fun foo() {
+        super.foo()
+        println("override foo")
+    }
+}
+
 fun main(args: Array<String>) {
 //    val base = Base(3)
 //    val derived = Derived(3)
