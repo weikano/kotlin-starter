@@ -23,10 +23,11 @@ class C1 {
 
     fun bar() {
         foo().x
-        publicFoo().x
+        //publicFoo().x
+        //public 方法，无法访问object成员
     }
 }
 
 fun main(args: Array<String>) {
-    val x1 = C1().
+//    val x1 = C1().
 }
