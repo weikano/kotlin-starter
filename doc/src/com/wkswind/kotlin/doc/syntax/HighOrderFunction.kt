@@ -17,14 +17,24 @@ import java.util.concurrent.locks.ReentrantLock
 //}
 //
 //fun get() = 1
-fun <T> invoke(msg : String, body:()->T) : T {
-    println(msg)
-    return body()
+//fun <T> invoke(msg : String, body:()->T) : T {
+//    println(msg)
+//    return body()
+//}
+//
+//fun get() = 1
+//
+//fun <T> simple(body : ()-> T) = body()
+
+//val sum = fun Int.(other : Int) = this+ other
+
+tailrec fun findFixPoint(x:Double) : Double {
+    if(x == Math.sin(x)) {
+        return x
+    }else {
+        return findFixPoint(Math.sin(x))
+    }
 }
-
-fun get() = 1
-
-fun <T> simple(body : ()-> T) = body()
 
 fun main(args: Array<String>) {
 //    println(invoke("high order function",::get))
@@ -33,6 +43,7 @@ fun main(args: Array<String>) {
 //        "comes"
 //    })
 
-    println(simple(::get))
-    println(simple { "hey" })
+//    println(simple(::get))
+//    println(simple { "hey" })
+//    println(1.sum(2))
 }
