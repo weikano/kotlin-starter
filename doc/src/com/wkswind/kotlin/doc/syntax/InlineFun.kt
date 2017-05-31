@@ -16,8 +16,8 @@ import java.util.concurrent.locks.ReentrantLock
 //    }
 //}
 
-inline fun mix(inlined : ()->Int,noinline uninlined : ()->Int) = inlined()+uninlined()
-fun b() = 1+2
+//inline fun mix(inlined : ()->Int,noinline uninlined : ()->Int) = inlined()+uninlined()
+//fun b() = 1+2
 
 fun main(args: Array<String>) {
 //    val lock = ReentrantLock(true)
@@ -25,10 +25,10 @@ fun main(args: Array<String>) {
 //        println("hello")
 //    }
 //    println(mix({1},{2}))
-    val list = listOf(1,2,3)
-    list.forEach {
-        println(it)
-    }
+//    val list = listOf(1,2,3)
+//    list.forEach {
+//        println(it)
+//    }
 //    println(mix({
 //        println("this is inline")
 //        2
